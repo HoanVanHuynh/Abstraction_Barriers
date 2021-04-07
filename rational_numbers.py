@@ -16,9 +16,12 @@ def mul_rational(rat1, rat2):
 
 # One of the simplest is to use lists
 from fractions import gcd # Greatest common divisor
+
+# This is a constructor that allow us to construct new instances of the data type
 def rational(n, d):
-    divisor = gcd(n,d)
+    divisor = gcd(n,d) # Reduce to lowest terms
     return [n//divisor, d//divisor]
+# This is a selector that allow us to access the different parts of the data type
 def numer(rat):
     return rat[0]
 def denom(rat):
